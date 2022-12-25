@@ -1,4 +1,5 @@
-<div id="<%= dom_id post %>">
+
+<div class="my-3" id="<%= dom_id post %>">
   <div class="card" style="width: 25rem;">
     <div class="card-header bg-white">
       <div class="d-flex justify-content-between">
@@ -8,7 +9,7 @@
           <% else %>
             <%= image_tag 'user-pp.png', class: "img-thumbnail rounded-circle", style: "width: 10%" %>
           <% end %>
-          <span class="fw-bold mx-2"><%= post.user.username %></span> <%# aqui não foi exibido %>
+          <span class="fw-bold mx-2"><%= post.user.username %></span>
         </div>
 
         <div>
