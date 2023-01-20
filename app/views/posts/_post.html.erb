@@ -59,3 +59,9 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.getElementById("post<%= post.id %>_images").addEventListener("dbclick", function(){
+    document.getElementById("post<%= post.id %>actions-likeBtn").click();
+  })
+</script>
