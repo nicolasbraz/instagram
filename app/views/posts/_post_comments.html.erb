@@ -1,6 +1,6 @@
 <% if post.comments.count > 0 %>
   <small class="text-muted">View all <%= pluralize(post.comments.count, "comments") %></small>
   <% post.comments.each do |comment| %>
-    <p class="card-text m-0"> <span class="fw-body"><%= comment.user.username %> </span> <%= comment.body %> </p>
+    <p class="card-text m-0"> <span class="fw-body"><b><%= comment.user.username %></b> </span> <%= comment.body %> </p>
   <% end %>
 <% end %>
