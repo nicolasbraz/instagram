@@ -7,7 +7,9 @@
       <i class="fa-regular fa-comment fa-xl fa-flip-horizontal"></i>
     </a>
   </div>
-  
+  <a href="#" data-bs-toggle="modal" data-bs-target="#post<%= post.id %>_likesModal" style="text-decoration:none" class="text-dark">
+    <small class="fw-bold my-1"><%= pluralize(post.likes.count, "like") %></small>
+  </a>
   <!-- Modal -->
   <div class="modal fade" id="post<%= post.id %>_likesModal" tabindex="-1" aria-labelledby="post<%= post.id %>_likesModalLabel" aria-hidden="true">
     <div class="modal-dialog">
