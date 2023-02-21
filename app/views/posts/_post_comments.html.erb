@@ -7,22 +7,22 @@
       <p class="card-text m-0"> <span class="fw-body"><b><%= comment.user.username %></b> </span> <%= comment.body %> </p>
     <% end %>
   <% end %>
-<% end %>
 
-<div class="modal fade" id="post<%= post.id %>_commentsModal" tabindex="-1" aria-labelledby="post<%= post.id %>_commentsModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="post<%= post.id %>_commentsModal">Post Comments</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="d-flex flex-column gap-3">
-          <% post.comments.each do |comment|%>
-            <%= render "posts/modal_comment", comment: comment %>
-          <% end %> 
+  <div class="modal fade" id="post<%= post.id %>_commentsModal" tabindex="-1" aria-labelledby="post<%= post.id %>_commentsModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="post<%= post.id %>_commentsModal">Post Comments</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-column gap-3">
+            <% post.comments.each do |comment|%>
+              <%= render "posts/modal_comment", comment: comment %>
+            <% end %> 
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
