@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
   root 'home#index'
   post 'toggle_like', to: 'likes#toggle_like', as: :toggle_like
+  resources :comments, only: %I[create destroy]
+  resources :users, only: [:show]
+
   # devise_scope :user do
   #   root 'devise/sessions#new'
   # end
-
-  resources :comments, only: %I[create destroy]
 end
