@@ -1,5 +1,5 @@
 <%= render 'users/profile_header', user: @user %>
-<%= if @user.private %>
+<% if @user.private %>
   <%= render 'users/profile_private' %>
 <% else %>
   <%= render 'users/profile_posts', user: @user %>
