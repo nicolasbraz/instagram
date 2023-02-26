@@ -24,6 +24,9 @@
           <i class="fa-solid fa-comment fa-xl fa-flip-horizontal text-white"></i>
           <small class="text-white fw-bold"><%= post.comments.count %></small>
         </div>
+        <% if post.images.count > 1 %>
+          <i class="fa-solid fa-images text-white multiple-images"></i>
+        <% end %>
       </div>
     <% end %>
   </div>
