@@ -74,6 +74,14 @@ body {
   text-shadow: 1px 1px 10px #000000a6;
 }
 
+.multiple-images {
+  position: absolute;
+    top: 12%;
+    left: 91%;
+    transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 10px #000000a6;
+}
+
 .profile-post:hover img {
   opacity: 50%;
 }
