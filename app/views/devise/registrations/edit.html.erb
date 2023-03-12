@@ -47,9 +47,34 @@
       <div class="row mb-3 mt-3">
         <%= f.label :phone_number, class:"col-sm-4 col-form-label fw-bold" %>
         <div class="col-sm-8">
-          <%= f.text_field :phone_number, placeholder:"Phone number", autofocus: true, class: "form-control" %>
+          <%= f.text_field :phone_number, placeholder: "Phone number", autofocus: true, class: "form-control" %>
         </div>
       </div>
+
+      <div class="row mb-3 mt-3">
+        <%= f.label :new_password, class:"col-sm-4 col-form-label fw-bold" %>
+        <div class="col-sm-8">
+          <%= f.password_field :password, placeholder: "New Password", autofocus: true, class: "form-control" %>
+          <small class="text-muted">Leave it blank if you don't want to change it.</small>
+        </div>
+      </div>
+
+      <div class="row mb-3 mt-3">
+        <%= f.label :new_password_confirmation, class:"col-sm-4 col-form-label fw-bold" %>
+        <div class="col-sm-8">
+          <%= f.password_field :password, placeholder: "New Password Confirmation", autofocus: true, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="row mb-3 mt-3">
+        <%= f.label :current_password, class:"col-sm-4 col-form-label fw-bold" %>
+        <div class="col-sm-8">
+          <%= f.password_field :current_password, placeholder: "Current Password", autofocus: true, class: "form-control" %>
+          <small class="text-muted">Current password require to submit.</small>
+        </div>
+      </div>
+
+      
     </div>
   </div>
 
