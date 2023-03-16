@@ -1,17 +1,25 @@
 <div class="container pt-2">
   <% if notice && notice.is_a?(Array) %>
     <% notice.each do |n| %>
-      <p class="alert alert-success"><%= n %></p>
+      <p class="alert alert-success alert-dismissible fade show"><%= n %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </p>
     <% end %>
   <% elsif notice && notice.is_a?(String) %>
-    <p class="alert alert-success"><%= notice %></p>
+    <p class="alert alert-success alert-dismissible fade show"><%= notice %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </p>
   <% end %>
 
   <% if alert && alert.is_a?(Array) %>
     <% alert.each do |a| %>
-      <p class="alert alert-danger"><%= a %></p>
+      <p class="alert alert-danger alert-dismissible fade show"><%= a %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </p>
     <% end %>
   <% elsif alert && alert.is_a?(String) %>
-      <p class="alert alert-danger"><%= alert %></p>
+      <p class="alert alert-danger alert-dismissible fade show"><%= alert %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </p>
   <% end %>
 </div>
