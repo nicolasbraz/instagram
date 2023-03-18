@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :comments, only: %I[create destroy]
   resources :users, only: [:show]
 
+  get 'set_theme', to: 'theme#update'
   # devise_scope :user do
   #   root 'devise/sessions#new'
   # end
