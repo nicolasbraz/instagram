@@ -18,3 +18,22 @@
 @import "font-awesome";
 @import "filepond";
 @import "filepond-plugin-image-preview";
+
+body.light {
+  color: black;
+  background-color: white;
+}
+
+body.dark {
+  color: white;
+  background-color: black;
+
+  .card {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .card-header, .card-footer {
+    background-color: black !important;
+    border-color: white !important;
+  }
+}
