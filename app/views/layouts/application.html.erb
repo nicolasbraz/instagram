@@ -10,7 +10,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="<%= cookies[:theme] %>">
     <% if current_user %>
       <%= render 'layouts/navbar' %>
     <% end %>
