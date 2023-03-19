@@ -37,7 +37,12 @@
               <%= button_to 'Log out', destroy_user_session_path, class: "dropdown-item", method: :delete %>
             </li>
           </ul>
-        </div>        
+        </div>
+        <% if cookies[:theme] == 'dark' %>
+          <%= link_to set_theme_path(theme: 'light') do %><i class="fa-sharp fa-regular fa-sun"></i><% end %>
+        <% else %>
+          <%= link_to set_theme_path(theme: 'dark') do %><i class="fa-solid fa-moon"></i><% end %>
+        <% end %> 
       </div>
     </div>
   </div>
