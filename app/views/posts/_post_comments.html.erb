@@ -4,7 +4,13 @@
       <small class="text-muted">View all <%= pluralize(post.comments.count, "comments") %></small>
     </a>
     <% post.comments.last(5).each do |comment| %>
-      <p class="card-text m-0"> <span class="fw-body"><b><%= comment.user.username %></b> </span> <%= comment.body %> </p>
+      <p class="card-text m-0"> 
+      <%= link_to comment.user, class: "a-decoration-none" do %>
+        <span class="fw-body">
+        <b><%= comment.user.username %></b> 
+        </span> 
+      <% end %> 
+    <%= comment.body %></p>
     <% end %>
   <% end %>
 
