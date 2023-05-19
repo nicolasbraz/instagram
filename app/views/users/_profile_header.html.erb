@@ -8,7 +8,8 @@
       <% unless user == current_user %> 
         <button class="btn btn-primary">Follow</button>
       <% end %>
-        
+      <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-transparent border"%>
+
     </div>
     <div class="d-flex gap-5">
       <small class="fw-bold"><%= pluralize(user.posts.count, "post") %></small>
